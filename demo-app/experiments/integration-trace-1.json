@@ -1,0 +1,467 @@
+{
+  "traceMetadata": {
+    "generatedAt": "2026-08-27T18:06:00.813Z",
+    "protocol": "MCP JSON-RPC 2.0 via McpSecurityGateway",
+    "environment": "Node.js / Express GuardRuntime in-process server",
+    "isSyntheticBenchmark": false,
+    "traceClassification": "Real Integration Trace (Phase D)"
+  },
+  "exchanges": [
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": "mcp-req-001",
+        "method": "tools/call",
+        "params": {
+          "name": "infra.getMetrics",
+          "arguments": {
+            "cluster": "prod-us-east",
+            "service": "billing-api"
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": "mcp-req-001",
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "Tool 'infra.getMetrics' executed successfully through GuardRuntime sandbox. Executed in safe container: Read-only observation of system state (No state mutations)"
+            }
+          ],
+          "isError": false
+        },
+        "guardTrace": {
+          "decisionId": "dec-mcp-mcp-req-001",
+          "timestamp": 1787853960812,
+          "tenantId": "tenant-enterprise-prod",
+          "principalId": "agent-mcp-integration",
+          "action": {
+            "id": "mcp-mcp-req-001",
+            "toolName": "infra.getMetrics",
+            "actionType": "READ",
+            "parameters": {
+              "cluster": "prod-us-east",
+              "service": "billing-api"
+            },
+            "timestamp": 1787853960811
+          },
+          "normalizedAction": {
+            "id": "mcp-mcp-req-001",
+            "toolName": "infra.getMetrics",
+            "actionType": "READ",
+            "parameters": {
+              "cluster": "prod-us-east",
+              "service": "billing-api"
+            },
+            "taintTags": [],
+            "timestamp": 1787853960811,
+            "nonce": "ecc0db8c6dd5"
+          },
+          "fingerprint": "97c5ed0582c49d541c45589450b181b0075059bf4b9bafc13a7e4eedd763f887",
+          "verdict": "ALLOW",
+          "reasons": [
+            "Action permitted by current policy and capabilities"
+          ],
+          "riskVector": {
+            "reversibility": 1,
+            "blastRadius": 0.1,
+            "resourceImpact": 0.1,
+            "confidentialityRisk": 0.1,
+            "overallRiskScore": 0.06,
+            "isHighImpact": false,
+            "classificationRationale": [
+              "Read-only query: trivially zero state mutation"
+            ]
+          },
+          "cacheConsulted": true,
+          "cacheHit": false,
+          "stageResults": [
+            {
+              "stageNumber": 1,
+              "stageName": "Normalize",
+              "passed": true,
+              "durationMs": 0.074,
+              "details": {
+                "fingerprint": "97c5ed0582c49d541c45589450b181b0075059bf4b9bafc13a7e4eedd763f887",
+                "parametersNormalized": 2
+              },
+              "explanation": "Action canonicalized. Fingerprint generated: 97c5ed0582c4..."
+            },
+            {
+              "stageNumber": 2,
+              "stageName": "Capability Authorization",
+              "passed": true,
+              "durationMs": 0.005,
+              "details": {
+                "isAuthorized": true,
+                "grantId": "grant-mcp-integration-test"
+              },
+              "explanation": "Capability grant valid: infra:read:*"
+            },
+            {
+              "stageNumber": 3,
+              "stageName": "Information-Flow Gate",
+              "passed": true,
+              "durationMs": 0.014,
+              "details": {
+                "hasTaint": false,
+                "taintTagsCount": 0
+              },
+              "explanation": "Clean information flow, zero taint tags detected"
+            },
+            {
+              "stageNumber": 4,
+              "stageName": "Execution-Plan Lookup",
+              "passed": true,
+              "durationMs": 0.018,
+              "details": {
+                "cacheConsulted": true,
+                "cacheHit": false,
+                "providedVerdict": false,
+                "planHintsCount": 0
+              },
+              "explanation": "Plan cache miss; seeded new structural plan template"
+            },
+            {
+              "stageNumber": 5,
+              "stageName": "Current Risk Classification",
+              "passed": true,
+              "durationMs": 0.131,
+              "details": {
+                "overallRiskScore": 0.06,
+                "reversibility": 1,
+                "blastRadius": 0.1,
+                "isHighImpact": false,
+                "rationale": [
+                  "Read-only query: trivially zero state mutation"
+                ]
+              },
+              "explanation": "Computed risk score: 0.060 (STANDARD)"
+            },
+            {
+              "stageNumber": 6,
+              "stageName": "Temporal / Drift / Budget Gate",
+              "passed": true,
+              "durationMs": 0.007,
+              "details": {
+                "hourlyActionCount": 0,
+                "hourlySpendRemaining": 10000,
+                "passed": true
+              },
+              "explanation": "Within limits (Actions: 0/100, Spend Left: $10000)"
+            },
+            {
+              "stageNumber": 7,
+              "stageName": "Runtime-Health Gate",
+              "passed": true,
+              "durationMs": 0.001,
+              "details": {
+                "runtimeHealth": "HEALTHY"
+              },
+              "explanation": "Runtime health HEALTHY"
+            },
+            {
+              "stageNumber": 8,
+              "stageName": "Confirmation or Final Re-Check",
+              "passed": true,
+              "durationMs": 0.001,
+              "details": {
+                "verdictAwaitingConfirmation": false,
+                "tokenProvided": false
+              },
+              "explanation": "No confirmation required"
+            },
+            {
+              "stageNumber": 9,
+              "stageName": "Constrained Execution",
+              "passed": true,
+              "durationMs": 0.042,
+              "details": {
+                "executed": true,
+                "executionSuccess": true,
+                "executionDurationMs": 0.039
+              },
+              "explanation": "Action executed safely: Executed in safe container: Read-only observation of system state (No state mutations)"
+            },
+            {
+              "stageNumber": 10,
+              "stageName": "Independent Outcome Verification",
+              "passed": true,
+              "durationMs": 0.001,
+              "details": {
+                "independentVerificationPassed": true,
+                "verificationDetails": "Independent verification confirmed container state delta aligns with predicted contract"
+              },
+              "explanation": "Independent verification confirmed container state delta aligns with predicted contract"
+            },
+            {
+              "stageNumber": 11,
+              "stageName": "Audit / Explanation Hash-Chain",
+              "passed": true,
+              "durationMs": 0.279,
+              "details": {
+                "auditBlockIndex": 1,
+                "blockHash": "9b3829a70a197cfe8794cec5601aaa848a4ee1f2394c7faeefaac537f9be2ecb",
+                "pcrRegister": "f5240c9ab87cab49447156e24fb1c0dea2d5014a14f5e9f872cec5d3fc2674e8"
+              },
+              "explanation": "Block #1 chained with Merkle Root: d151a9a1815a..."
+            }
+          ],
+          "invokedInvariantsChecked": [
+            "INV-1",
+            "INV-2",
+            "INV-3",
+            "INV-4",
+            "INV-5",
+            "INV-6",
+            "INV-7"
+          ],
+          "invariantsPassed": true,
+          "auditHash": "9b3829a70a197cfe8794cec5601aaa848a4ee1f2394c7faeefaac537f9be2ecb",
+          "executionOutcome": {
+            "executed": true,
+            "durationMs": 0.039,
+            "success": true,
+            "resultSummary": "Executed in safe container: Read-only observation of system state (No state mutations)",
+            "independentVerificationPassed": true,
+            "verificationDetails": "Independent verification confirmed container state delta aligns with predicted contract"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "jsonrpc": "2.0",
+        "id": "mcp-req-002",
+        "method": "tools/call",
+        "params": {
+          "name": "system.executeCommand",
+          "arguments": {
+            "command": "sudo rm -rf /var/log"
+          }
+        }
+      },
+      "response": {
+        "jsonrpc": "2.0",
+        "id": "mcp-req-002",
+        "error": {
+          "code": -32001,
+          "message": "GuardRuntime Security Block: Tool action 'system.executeCommand' is not covered by any active capability grant for agent-mcp-integration; Taint violation: Action 'system.executeCommand' hits restricted sink 'SYSTEM_EXEC' while carrying untrusted taint [PROMPT_INJECTION: Dangerous command execution pattern]",
+          "data": {
+            "decisionId": "dec-mcp-mcp-req-002",
+            "verdict": "BLOCK",
+            "auditHash": "5b05cfb810b82820d617f7ef308c41666f0e26f0d7edeacf5439da7592d4d15f"
+          }
+        },
+        "guardTrace": {
+          "decisionId": "dec-mcp-mcp-req-002",
+          "timestamp": 1787853960813,
+          "tenantId": "tenant-enterprise-prod",
+          "principalId": "agent-mcp-integration",
+          "action": {
+            "id": "mcp-mcp-req-002",
+            "toolName": "system.executeCommand",
+            "actionType": "EXECUTE",
+            "parameters": {
+              "command": "sudo rm -rf /var/log"
+            },
+            "timestamp": 1787853960812
+          },
+          "normalizedAction": {
+            "id": "mcp-mcp-req-002",
+            "toolName": "system.executeCommand",
+            "actionType": "EXECUTE",
+            "parameters": {
+              "command": "sudo rm -rf /var/log"
+            },
+            "taintTags": [],
+            "timestamp": 1787853960812,
+            "nonce": "49e7833a0571"
+          },
+          "fingerprint": "376d41e8b508398628910db84d91b3692cc5b380a2570d622d2ef527c1384016",
+          "verdict": "BLOCK",
+          "reasons": [
+            "Tool action 'system.executeCommand' is not covered by any active capability grant for agent-mcp-integration",
+            "Taint violation: Action 'system.executeCommand' hits restricted sink 'SYSTEM_EXEC' while carrying untrusted taint [PROMPT_INJECTION: Dangerous command execution pattern]"
+          ],
+          "riskVector": {
+            "reversibility": 0.2,
+            "blastRadius": 0.9,
+            "resourceImpact": 0.6,
+            "confidentialityRisk": 0.1,
+            "overallRiskScore": 0.71,
+            "isHighImpact": true,
+            "classificationRationale": [
+              "Infrastructure/Shell execution: high blast radius"
+            ]
+          },
+          "cacheConsulted": true,
+          "cacheHit": false,
+          "stageResults": [
+            {
+              "stageNumber": 1,
+              "stageName": "Normalize",
+              "passed": true,
+              "durationMs": 0.063,
+              "details": {
+                "fingerprint": "376d41e8b508398628910db84d91b3692cc5b380a2570d622d2ef527c1384016",
+                "parametersNormalized": 1
+              },
+              "explanation": "Action canonicalized. Fingerprint generated: 376d41e8b508..."
+            },
+            {
+              "stageNumber": 2,
+              "stageName": "Capability Authorization",
+              "passed": false,
+              "durationMs": 0.008,
+              "details": {
+                "isAuthorized": false
+              },
+              "explanation": "Capability check failed: Missing capability grant for system.executeCommand"
+            },
+            {
+              "stageNumber": 3,
+              "stageName": "Information-Flow Gate",
+              "passed": false,
+              "durationMs": 0.109,
+              "details": {
+                "hasTaint": true,
+                "taintTagsCount": 1,
+                "sinkViolation": {
+                  "sink": "SYSTEM_EXEC",
+                  "reason": "Action 'system.executeCommand' hits restricted sink 'SYSTEM_EXEC' while carrying untrusted taint [PROMPT_INJECTION: Dangerous command execution pattern]"
+                }
+              },
+              "explanation": "Dangerous sink interaction blocked: SYSTEM_EXEC"
+            },
+            {
+              "stageNumber": 4,
+              "stageName": "Execution-Plan Lookup",
+              "passed": true,
+              "durationMs": 0.025,
+              "details": {
+                "cacheConsulted": true,
+                "cacheHit": false,
+                "providedVerdict": false,
+                "planHintsCount": 0
+              },
+              "explanation": "Plan cache miss; seeded new structural plan template"
+            },
+            {
+              "stageNumber": 5,
+              "stageName": "Current Risk Classification",
+              "passed": true,
+              "durationMs": 0.009,
+              "details": {
+                "overallRiskScore": 0.71,
+                "reversibility": 0.2,
+                "blastRadius": 0.9,
+                "isHighImpact": true,
+                "rationale": [
+                  "Infrastructure/Shell execution: high blast radius"
+                ]
+              },
+              "explanation": "Computed risk score: 0.710 (HIGH IMPACT)"
+            },
+            {
+              "stageNumber": 6,
+              "stageName": "Temporal / Drift / Budget Gate",
+              "passed": true,
+              "durationMs": 0.019,
+              "details": {
+                "hourlyActionCount": 1,
+                "hourlySpendRemaining": 10000,
+                "passed": true
+              },
+              "explanation": "Within limits (Actions: 1/100, Spend Left: $10000)"
+            },
+            {
+              "stageNumber": 7,
+              "stageName": "Runtime-Health Gate",
+              "passed": true,
+              "durationMs": 0.001,
+              "details": {
+                "runtimeHealth": "HEALTHY"
+              },
+              "explanation": "Runtime health HEALTHY"
+            },
+            {
+              "stageNumber": 8,
+              "stageName": "Confirmation or Final Re-Check",
+              "passed": true,
+              "durationMs": 0.001,
+              "details": {
+                "verdictAwaitingConfirmation": false,
+                "tokenProvided": false
+              },
+              "explanation": "No confirmation required"
+            },
+            {
+              "stageNumber": 9,
+              "stageName": "Constrained Execution",
+              "passed": true,
+              "durationMs": 0.005,
+              "details": {
+                "executed": false,
+                "executionSuccess": false,
+                "executionDurationMs": 0.001
+              },
+              "explanation": "Action not executed (Verdict: BLOCK)"
+            },
+            {
+              "stageNumber": 10,
+              "stageName": "Independent Outcome Verification",
+              "passed": true,
+              "durationMs": 0.001,
+              "details": {
+                "independentVerificationPassed": true,
+                "verificationDetails": "Skipped (not executed)"
+              },
+              "explanation": "Skipped (not executed)"
+            },
+            {
+              "stageNumber": 11,
+              "stageName": "Audit / Explanation Hash-Chain",
+              "passed": true,
+              "durationMs": 0.27,
+              "details": {
+                "auditBlockIndex": 2,
+                "blockHash": "5b05cfb810b82820d617f7ef308c41666f0e26f0d7edeacf5439da7592d4d15f",
+                "pcrRegister": "a6e03ac2216d657df43fdf10d3d38676456dfb909e48317e760dfbaff9cbe329"
+              },
+              "explanation": "Block #2 chained with Merkle Root: 73daf370a451..."
+            }
+          ],
+          "invokedInvariantsChecked": [
+            "INV-1",
+            "INV-2",
+            "INV-3",
+            "INV-4",
+            "INV-5",
+            "INV-6",
+            "INV-7"
+          ],
+          "invariantsPassed": true,
+          "auditHash": "5b05cfb810b82820d617f7ef308c41666f0e26f0d7edeacf5439da7592d4d15f",
+          "executionOutcome": {
+            "executed": false,
+            "durationMs": 0.001,
+            "success": false,
+            "resultSummary": "Execution not initiated",
+            "independentVerificationPassed": true,
+            "verificationDetails": "Skipped (not executed)"
+          }
+        }
+      }
+    }
+  ],
+  "auditLedgerSnapshot": {
+    "blockCount": 3,
+    "chainIntegrity": {
+      "isValid": true,
+      "verifiedBlockCount": 3
+    }
+  }
+}

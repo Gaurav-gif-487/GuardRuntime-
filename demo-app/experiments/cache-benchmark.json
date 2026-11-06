@@ -1,0 +1,1411 @@
+{
+  "generatedAt": "2026-08-27T18:06:00.806Z",
+  "runs": [
+    {
+      "timestamp": "2026-08-27T18:06:00.713Z",
+      "totalRepetitions": 40,
+      "tenantId": "tenant-enterprise-savings-bench",
+      "cacheHits": 38,
+      "cacheMisses": 2,
+      "cacheHitRate": 0.95,
+      "cachedPipelineAvgLatencyMs": 0.419,
+      "uncachedPipelineAvgLatencyMs": 0.378,
+      "latencyReductionPercent": -10.85,
+      "unauthorizedCacheBypasses": 0,
+      "falsifiableProperty3Respected": true,
+      "falsifiableProperty4Respected": true,
+      "iterationsData": [
+        {
+          "iteration": 1,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.426,
+          "uncachedLatencyMs": 0.385,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": false
+        },
+        {
+          "iteration": 2,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.364,
+          "uncachedLatencyMs": 0.367,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 3,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.385,
+          "uncachedLatencyMs": 0.36,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": false
+        },
+        {
+          "iteration": 4,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.387,
+          "uncachedLatencyMs": 0.37,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 5,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.37,
+          "uncachedLatencyMs": 0.375,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 6,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.439,
+          "uncachedLatencyMs": 0.45,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 7,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.418,
+          "uncachedLatencyMs": 0.395,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 8,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.893,
+          "uncachedLatencyMs": 0.487,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 9,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.372,
+          "uncachedLatencyMs": 0.376,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 10,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.728,
+          "uncachedLatencyMs": 0.379,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 11,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.38,
+          "uncachedLatencyMs": 0.374,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 12,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.356,
+          "uncachedLatencyMs": 0.36,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 13,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.249,
+          "uncachedLatencyMs": 0.25,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 14,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.223,
+          "uncachedLatencyMs": 0.243,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 15,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.215,
+          "uncachedLatencyMs": 0.237,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 16,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.223,
+          "uncachedLatencyMs": 0.211,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 17,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.245,
+          "uncachedLatencyMs": 0.214,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 18,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.325,
+          "uncachedLatencyMs": 0.219,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 19,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.23,
+          "uncachedLatencyMs": 0.218,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 20,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.293,
+          "uncachedLatencyMs": 0.227,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 21,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.216,
+          "uncachedLatencyMs": 0.205,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 22,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.261,
+          "uncachedLatencyMs": 0.413,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 23,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.418,
+          "uncachedLatencyMs": 0.366,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 24,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.233,
+          "uncachedLatencyMs": 0.208,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 25,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.229,
+          "uncachedLatencyMs": 0.22,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 26,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 1.318,
+          "uncachedLatencyMs": 0.397,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 27,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.414,
+          "uncachedLatencyMs": 0.356,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 28,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.368,
+          "uncachedLatencyMs": 0.346,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 29,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.453,
+          "uncachedLatencyMs": 0.576,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 30,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.445,
+          "uncachedLatencyMs": 0.954,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 31,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.405,
+          "uncachedLatencyMs": 0.516,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 32,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.55,
+          "uncachedLatencyMs": 1.051,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 33,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.572,
+          "uncachedLatencyMs": 0.356,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 34,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.38,
+          "uncachedLatencyMs": 0.349,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 35,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.476,
+          "uncachedLatencyMs": 0.393,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 36,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.385,
+          "uncachedLatencyMs": 0.452,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 37,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 1.015,
+          "uncachedLatencyMs": 0.401,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 38,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.36,
+          "uncachedLatencyMs": 0.353,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 39,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.342,
+          "uncachedLatencyMs": 0.338,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 40,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.387,
+          "uncachedLatencyMs": 0.384,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-08-27T18:06:00.748Z",
+      "totalRepetitions": 50,
+      "tenantId": "tenant-enterprise-savings-bench",
+      "cacheHits": 48,
+      "cacheMisses": 2,
+      "cacheHitRate": 0.96,
+      "cachedPipelineAvgLatencyMs": 0.351,
+      "uncachedPipelineAvgLatencyMs": 0.332,
+      "latencyReductionPercent": -5.72,
+      "unauthorizedCacheBypasses": 0,
+      "falsifiableProperty3Respected": true,
+      "falsifiableProperty4Respected": true,
+      "iterationsData": [
+        {
+          "iteration": 1,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.444,
+          "uncachedLatencyMs": 0.351,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": false
+        },
+        {
+          "iteration": 2,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.396,
+          "uncachedLatencyMs": 0.422,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 3,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.425,
+          "uncachedLatencyMs": 0.459,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": false
+        },
+        {
+          "iteration": 4,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.678,
+          "uncachedLatencyMs": 0.464,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 5,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.42,
+          "uncachedLatencyMs": 0.439,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 6,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.362,
+          "uncachedLatencyMs": 0.365,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 7,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.579,
+          "uncachedLatencyMs": 0.37,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 8,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.362,
+          "uncachedLatencyMs": 0.815,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 9,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.475,
+          "uncachedLatencyMs": 0.328,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 10,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.381,
+          "uncachedLatencyMs": 0.346,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 11,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.36,
+          "uncachedLatencyMs": 0.345,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 12,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.23,
+          "uncachedLatencyMs": 0.21,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 13,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.226,
+          "uncachedLatencyMs": 0.231,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 14,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.215,
+          "uncachedLatencyMs": 0.262,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 15,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.223,
+          "uncachedLatencyMs": 0.215,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 16,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.282,
+          "uncachedLatencyMs": 0.422,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 17,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.657,
+          "uncachedLatencyMs": 0.272,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 18,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.225,
+          "uncachedLatencyMs": 0.213,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 19,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.246,
+          "uncachedLatencyMs": 0.245,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 20,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.237,
+          "uncachedLatencyMs": 0.227,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 21,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.234,
+          "uncachedLatencyMs": 0.254,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 22,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.387,
+          "uncachedLatencyMs": 0.368,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 23,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.595,
+          "uncachedLatencyMs": 0.375,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 24,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.36,
+          "uncachedLatencyMs": 0.311,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 25,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.237,
+          "uncachedLatencyMs": 0.306,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 26,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.253,
+          "uncachedLatencyMs": 0.227,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 27,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.216,
+          "uncachedLatencyMs": 0.207,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 28,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.224,
+          "uncachedLatencyMs": 0.219,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 29,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.221,
+          "uncachedLatencyMs": 0.217,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 30,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.221,
+          "uncachedLatencyMs": 0.225,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 31,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.224,
+          "uncachedLatencyMs": 0.217,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 32,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.222,
+          "uncachedLatencyMs": 0.226,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 33,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.431,
+          "uncachedLatencyMs": 0.639,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 34,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.8,
+          "uncachedLatencyMs": 0.552,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 35,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.502,
+          "uncachedLatencyMs": 0.358,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 36,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.339,
+          "uncachedLatencyMs": 0.319,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 37,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.318,
+          "uncachedLatencyMs": 0.331,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 38,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.341,
+          "uncachedLatencyMs": 0.343,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 39,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.339,
+          "uncachedLatencyMs": 0.345,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 40,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.366,
+          "uncachedLatencyMs": 0.351,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 41,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.337,
+          "uncachedLatencyMs": 0.356,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 42,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.342,
+          "uncachedLatencyMs": 0.324,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 43,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.315,
+          "uncachedLatencyMs": 0.476,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 44,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.494,
+          "uncachedLatencyMs": 0.403,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 45,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.431,
+          "uncachedLatencyMs": 0.421,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 46,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.436,
+          "uncachedLatencyMs": 0.393,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 47,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.238,
+          "uncachedLatencyMs": 0.213,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 48,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.219,
+          "uncachedLatencyMs": 0.208,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 49,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.263,
+          "uncachedLatencyMs": 0.225,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 50,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.217,
+          "uncachedLatencyMs": 0.211,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-08-27T18:06:00.806Z",
+      "totalRepetitions": 60,
+      "tenantId": "tenant-enterprise-savings-bench",
+      "cacheHits": 58,
+      "cacheMisses": 2,
+      "cacheHitRate": 0.967,
+      "cachedPipelineAvgLatencyMs": 0.464,
+      "uncachedPipelineAvgLatencyMs": 0.49,
+      "latencyReductionPercent": 5.31,
+      "unauthorizedCacheBypasses": 0,
+      "falsifiableProperty3Respected": true,
+      "falsifiableProperty4Respected": true,
+      "iterationsData": [
+        {
+          "iteration": 1,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.223,
+          "uncachedLatencyMs": 0.2,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": false
+        },
+        {
+          "iteration": 2,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.204,
+          "uncachedLatencyMs": 0.202,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 3,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.206,
+          "uncachedLatencyMs": 0.189,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": false
+        },
+        {
+          "iteration": 4,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.2,
+          "uncachedLatencyMs": 0.191,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 5,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.266,
+          "uncachedLatencyMs": 0.26,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 6,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.26,
+          "uncachedLatencyMs": 0.252,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 7,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.275,
+          "uncachedLatencyMs": 0.282,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 8,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.27,
+          "uncachedLatencyMs": 0.303,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 9,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.529,
+          "uncachedLatencyMs": 1.124,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 10,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.974,
+          "uncachedLatencyMs": 1.956,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 11,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.797,
+          "uncachedLatencyMs": 0.442,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 12,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.524,
+          "uncachedLatencyMs": 0.429,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 13,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.456,
+          "uncachedLatencyMs": 0.414,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 14,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.51,
+          "uncachedLatencyMs": 0.571,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 15,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.594,
+          "uncachedLatencyMs": 0.564,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 16,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 1.062,
+          "uncachedLatencyMs": 0.565,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 17,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 1.238,
+          "uncachedLatencyMs": 0.447,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 18,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.416,
+          "uncachedLatencyMs": 0.371,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 19,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.449,
+          "uncachedLatencyMs": 0.449,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 20,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.438,
+          "uncachedLatencyMs": 0.426,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 21,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.428,
+          "uncachedLatencyMs": 0.583,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 22,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 1.499,
+          "uncachedLatencyMs": 0.417,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 23,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.385,
+          "uncachedLatencyMs": 0.366,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 24,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.361,
+          "uncachedLatencyMs": 0.349,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 25,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.412,
+          "uncachedLatencyMs": 0.385,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 26,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.377,
+          "uncachedLatencyMs": 0.399,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 27,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.74,
+          "uncachedLatencyMs": 0.535,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 28,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 1.142,
+          "uncachedLatencyMs": 0.398,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 29,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.562,
+          "uncachedLatencyMs": 0.429,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 30,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.458,
+          "uncachedLatencyMs": 0.334,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 31,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.32,
+          "uncachedLatencyMs": 0.224,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 32,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.255,
+          "uncachedLatencyMs": 0.287,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 33,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.265,
+          "uncachedLatencyMs": 0.273,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 34,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.269,
+          "uncachedLatencyMs": 0.247,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 35,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.255,
+          "uncachedLatencyMs": 0.214,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 36,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.266,
+          "uncachedLatencyMs": 0.301,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 37,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.378,
+          "uncachedLatencyMs": 0.427,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 38,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.423,
+          "uncachedLatencyMs": 0.317,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 39,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.218,
+          "uncachedLatencyMs": 0.206,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 40,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.245,
+          "uncachedLatencyMs": 0.219,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 41,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.217,
+          "uncachedLatencyMs": 0.207,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 42,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.272,
+          "uncachedLatencyMs": 1.165,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 43,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 1.009,
+          "uncachedLatencyMs": 0.533,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 44,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.36,
+          "uncachedLatencyMs": 0.355,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 45,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.53,
+          "uncachedLatencyMs": 0.535,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 46,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.461,
+          "uncachedLatencyMs": 0.646,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 47,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.435,
+          "uncachedLatencyMs": 0.39,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 48,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.377,
+          "uncachedLatencyMs": 0.345,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 49,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.343,
+          "uncachedLatencyMs": 0.392,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 50,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.376,
+          "uncachedLatencyMs": 0.621,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 51,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.386,
+          "uncachedLatencyMs": 2.152,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 52,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.534,
+          "uncachedLatencyMs": 0.437,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 53,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.453,
+          "uncachedLatencyMs": 0.412,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 54,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.373,
+          "uncachedLatencyMs": 0.36,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 55,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.361,
+          "uncachedLatencyMs": 0.338,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 56,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.321,
+          "uncachedLatencyMs": 0.349,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 57,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.356,
+          "uncachedLatencyMs": 0.337,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        },
+        {
+          "iteration": 58,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.358,
+          "uncachedLatencyMs": 0.553,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 59,
+          "actionName": "infra.getMetrics",
+          "cachedLatencyMs": 0.548,
+          "uncachedLatencyMs": 0.792,
+          "cachedVerdict": "ALLOW",
+          "uncachedVerdict": "ALLOW",
+          "cacheHit": true
+        },
+        {
+          "iteration": 60,
+          "actionName": "infra.deploy",
+          "cachedLatencyMs": 0.637,
+          "uncachedLatencyMs": 1.922,
+          "cachedVerdict": "REQUIRE_CONFIRMATION",
+          "uncachedVerdict": "REQUIRE_CONFIRMATION",
+          "cacheHit": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "avgHitRate": 0.959,
+    "avgLatencyReductionPercent": -3.75,
+    "avgCachedLatencyMs": 0.411,
+    "avgUncachedLatencyMs": 0.4,
+    "property3Violations": 0,
+    "property4Violations": 0
+  }
+}

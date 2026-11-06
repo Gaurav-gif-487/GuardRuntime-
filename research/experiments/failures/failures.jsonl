@@ -1,0 +1,1 @@
+{"status":"executed","split":"random","seeds":[101,202,303,404,505,606],"cases":60000,"invalid_plan_reuse":0,"oracle_disagreement":0,"note":"Zero failures recorded on the random split. This file only covers the random split — see experiments/results.json splits_not_yet_implemented for the five splits that have not been run."}

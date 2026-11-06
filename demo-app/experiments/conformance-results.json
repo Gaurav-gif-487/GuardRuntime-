@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-08-27T20:20:05.231Z",
+  "specVersion": "v0.1",
+  "totalRequirements": 8,
+  "requirementsPassed": 8,
+  "conformanceRate": 1,
+  "overallStatus": "SPEC_CONFORMANT",
+  "results": [
+    {
+      "reqId": "CONF-01",
+      "section": "1. Normalization & Fingerprinting",
+      "invariantMapping": "INV-2",
+      "name": "Parameter Normalization Key Canonicalization",
+      "passed": true,
+      "details": "Fingerprints: t1=6ce8006cac, t2=6ce8006cac (Matched: true)"
+    },
+    {
+      "reqId": "CONF-02",
+      "section": "2. Capability Authorization",
+      "invariantMapping": "INV-1",
+      "name": "Missing Capability Grant Strict Rejection",
+      "passed": true,
+      "details": "Verdict: BLOCK, Executed: false"
+    },
+    {
+      "reqId": "CONF-03",
+      "section": "3. Information-Flow / Taint Gate",
+      "invariantMapping": "INV-7",
+      "name": "Prompt Injection Taint Detection on Restricted Sink",
+      "passed": true,
+      "details": "Taint gate verdict: BLOCK"
+    },
+    {
+      "reqId": "CONF-04",
+      "section": "4. Non-Authorizing Plan Cache",
+      "invariantMapping": "INV-3",
+      "name": "Cache Hit Invariant Non-Authorizing Guarantee",
+      "passed": true,
+      "details": "CacheHit: true, ProvidedVerdict: false"
+    },
+    {
+      "reqId": "CONF-05",
+      "section": "5. Risk Classification",
+      "invariantMapping": "INV-4",
+      "name": "High Impact Actions Mandatory Human Confirmation",
+      "passed": true,
+      "details": "Verdict: REQUIRE_CONFIRMATION, isHighImpact: true"
+    },
+    {
+      "reqId": "CONF-06",
+      "section": "7. Runtime-Health Gate",
+      "invariantMapping": "INV-5",
+      "name": "Degraded Runtime Health Strict Fail-Closed",
+      "passed": true,
+      "details": "Health: DEGRADED, Output Verdict: BLOCK"
+    },
+    {
+      "reqId": "CONF-07",
+      "section": "8. Confirmation Anti-Replay",
+      "invariantMapping": "INV-6",
+      "name": "Single-Use Confirmation Token Invalidation",
+      "passed": true,
+      "details": "First use: ALLOW, Second replay use: BLOCK"
+    },
+    {
+      "reqId": "CONF-08",
+      "section": "11. Audit Hash-Chain Integrity",
+      "invariantMapping": "INV-7",
+      "name": "Tamper-Evident SHA-256 Merkle Ledger",
+      "passed": true,
+      "details": "Ledger valid: true, Verified blocks: 11"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-08-27T20:19:12.922Z",
+  "benchmarkName": "Synthetic Multi-Domain Agent Evaluation (5 Verticals)",
+  "totalTasks": 1000,
+  "totalActionSteps": 2000,
+  "overallAccuracyRate": 1,
+  "safetyViolationInterceptionRate": 1,
+  "falsePositiveRateOnBenign": 0,
+  "latencyMetrics": {
+    "p50DurationMs": 0.281,
+    "p90DurationMs": 0.873,
+    "p99DurationMs": 4.598,
+    "meanDurationMs": 0.629,
+    "minDurationMs": 0.21,
+    "maxDurationMs": 119.501
+  },
+  "domainBreakdown": {
+    "RETAIL": {
+      "taskCount": 200,
+      "actionCount": 400,
+      "accuracyRate": 1,
+      "interceptionRate": 1
+    },
+    "AIRLINE": {
+      "taskCount": 200,
+      "actionCount": 400,
+      "accuracyRate": 1,
+      "interceptionRate": 1
+    },
+    "FINTECH": {
+      "taskCount": 200,
+      "actionCount": 400,
+      "accuracyRate": 1,
+      "interceptionRate": 1
+    },
+    "DEVOPS": {
+      "taskCount": 200,
+      "actionCount": 400,
+      "accuracyRate": 1,
+      "interceptionRate": 1
+    },
+    "HEALTHCARE": {
+      "taskCount": 200,
+      "actionCount": 400,
+      "accuracyRate": 1,
+      "interceptionRate": 1
+    }
+  }
+}

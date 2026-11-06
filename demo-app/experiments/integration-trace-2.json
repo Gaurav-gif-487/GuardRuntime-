@@ -1,0 +1,723 @@
+{
+  "metadata": {
+    "generatedAt": "2026-08-27T18:05:45.970Z",
+    "integrationSource": "CLI Agent Workflow Adapter (Phase I)",
+    "isSyntheticBenchmark": false,
+    "traceClassification": "Real Integration Trace 2 (Phase I)",
+    "policyEngine": "Declarative JSON Schema v1"
+  },
+  "policyEquivalenceTestPassed": true,
+  "equivalenceSamples": [
+    {
+      "toolName": "infra.getMetrics",
+      "params": {
+        "cluster": "us-east"
+      },
+      "verdict": "ALLOW",
+      "reasons": [
+        "Action permitted by current policy and capabilities"
+      ]
+    },
+    {
+      "toolName": "infra.deploy",
+      "params": {
+        "environment": "staging"
+      },
+      "verdict": "REQUIRE_CONFIRMATION",
+      "reasons": [
+        "Matched rule 'Confirm Staging Deploy' [CONFIRM]"
+      ]
+    },
+    {
+      "toolName": "infra.deploy",
+      "params": {
+        "environment": "airgapped-prod-eu"
+      },
+      "verdict": "BLOCK",
+      "reasons": [
+        "Matched rule 'Deny Airgapped Prod Direct Deploy' [DENY]"
+      ]
+    },
+    {
+      "toolName": "system.executeCommand",
+      "params": {
+        "command": "rm -rf /"
+      },
+      "verdict": "BLOCK",
+      "reasons": [
+        "Tool action 'system.executeCommand' is not covered by any active capability grant for agent-eq-test"
+      ]
+    }
+  ],
+  "invocations": [
+    {
+      "description": "Read-only telemetry command",
+      "result": {
+        "invocationId": "dec-cli-act-1787853945964",
+        "command": "infra.getMetrics",
+        "verdict": "ALLOW",
+        "allowedToExecute": true,
+        "totalLatencyUs": 1398,
+        "stageLatencyBreakdownUs": {
+          "Normalize": 97,
+          "Capability Authorization": 19,
+          "Information-Flow Gate": 52,
+          "Execution-Plan Lookup": 45,
+          "Current Risk Classification": 107,
+          "Temporal / Drift / Budget Gate": 24,
+          "Runtime-Health Gate": 5,
+          "Confirmation or Final Re-Check": 6,
+          "Constrained Execution": 112,
+          "Independent Outcome Verification": 6,
+          "Audit / Explanation Hash-Chain": 617
+        },
+        "confirmationWaitTimeMs": 0,
+        "budgetRemainingUsd": 4840,
+        "auditBlockHash": "de43f4a5a6376c88859b89da1531dbea0511ce3150314fb8096ab2363a306d8d",
+        "trace": {
+          "decisionId": "dec-cli-act-1787853945964",
+          "timestamp": 1787853945966,
+          "tenantId": "tenant-enterprise-prod",
+          "principalId": "cli-agent-alice-ops",
+          "action": {
+            "id": "cli-act-1787853945964",
+            "toolName": "infra.getMetrics",
+            "actionType": "READ",
+            "parameters": {
+              "cluster": "prod-europe",
+              "period": "1h"
+            },
+            "timestamp": 1787853945964
+          },
+          "normalizedAction": {
+            "id": "cli-act-1787853945964",
+            "toolName": "infra.getMetrics",
+            "actionType": "READ",
+            "parameters": {
+              "cluster": "prod-europe",
+              "period": "1h"
+            },
+            "taintTags": [],
+            "timestamp": 1787853945964,
+            "nonce": "ba5045374a82"
+          },
+          "fingerprint": "845ac535b926e217698186b1a96b966bf98cc618a4d6c079deaf0383aea3a3ec",
+          "verdict": "ALLOW",
+          "reasons": [
+            "Action permitted by current policy and capabilities"
+          ],
+          "riskVector": {
+            "reversibility": 1,
+            "blastRadius": 0.1,
+            "resourceImpact": 0.1,
+            "confidentialityRisk": 0.1,
+            "overallRiskScore": 0.06,
+            "isHighImpact": false,
+            "classificationRationale": [
+              "Read-only query: trivially zero state mutation"
+            ]
+          },
+          "cacheConsulted": true,
+          "cacheHit": false,
+          "stageResults": [
+            {
+              "stageNumber": 1,
+              "stageName": "Normalize",
+              "passed": true,
+              "durationMs": 0.097,
+              "details": {
+                "fingerprint": "845ac535b926e217698186b1a96b966bf98cc618a4d6c079deaf0383aea3a3ec",
+                "parametersNormalized": 2
+              },
+              "explanation": "Action canonicalized. Fingerprint generated: 845ac535b926..."
+            },
+            {
+              "stageNumber": 2,
+              "stageName": "Capability Authorization",
+              "passed": true,
+              "durationMs": 0.019,
+              "details": {
+                "isAuthorized": true,
+                "grantId": "grant-cli-cli-agent-alice-ops"
+              },
+              "explanation": "Capability grant valid: infra:read:*"
+            },
+            {
+              "stageNumber": 3,
+              "stageName": "Information-Flow Gate",
+              "passed": true,
+              "durationMs": 0.052,
+              "details": {
+                "hasTaint": false,
+                "taintTagsCount": 0
+              },
+              "explanation": "Clean information flow, zero taint tags detected"
+            },
+            {
+              "stageNumber": 4,
+              "stageName": "Execution-Plan Lookup",
+              "passed": true,
+              "durationMs": 0.045,
+              "details": {
+                "cacheConsulted": true,
+                "cacheHit": false,
+                "providedVerdict": false,
+                "planHintsCount": 0
+              },
+              "explanation": "Plan cache miss; seeded new structural plan template"
+            },
+            {
+              "stageNumber": 5,
+              "stageName": "Current Risk Classification",
+              "passed": true,
+              "durationMs": 0.107,
+              "details": {
+                "overallRiskScore": 0.06,
+                "reversibility": 1,
+                "blastRadius": 0.1,
+                "isHighImpact": false,
+                "rationale": [
+                  "Read-only query: trivially zero state mutation"
+                ]
+              },
+              "explanation": "Computed risk score: 0.060 (STANDARD)"
+            },
+            {
+              "stageNumber": 6,
+              "stageName": "Temporal / Drift / Budget Gate",
+              "passed": true,
+              "durationMs": 0.024,
+              "details": {
+                "hourlyActionCount": 0,
+                "hourlySpendRemaining": 10000,
+                "passed": true
+              },
+              "explanation": "Within limits (Actions: 0/100, Spend Left: $10000)"
+            },
+            {
+              "stageNumber": 7,
+              "stageName": "Runtime-Health Gate",
+              "passed": true,
+              "durationMs": 0.005,
+              "details": {
+                "runtimeHealth": "HEALTHY"
+              },
+              "explanation": "Runtime health HEALTHY"
+            },
+            {
+              "stageNumber": 8,
+              "stageName": "Confirmation or Final Re-Check",
+              "passed": true,
+              "durationMs": 0.006,
+              "details": {
+                "verdictAwaitingConfirmation": false,
+                "tokenProvided": false
+              },
+              "explanation": "No confirmation required"
+            },
+            {
+              "stageNumber": 9,
+              "stageName": "Constrained Execution",
+              "passed": true,
+              "durationMs": 0.112,
+              "details": {
+                "executed": true,
+                "executionSuccess": true,
+                "executionDurationMs": 0.1
+              },
+              "explanation": "Action executed safely: Executed in safe container: Read-only observation of system state (No state mutations)"
+            },
+            {
+              "stageNumber": 10,
+              "stageName": "Independent Outcome Verification",
+              "passed": true,
+              "durationMs": 0.006,
+              "details": {
+                "independentVerificationPassed": true,
+                "verificationDetails": "Independent verification confirmed container state delta aligns with predicted contract"
+              },
+              "explanation": "Independent verification confirmed container state delta aligns with predicted contract"
+            },
+            {
+              "stageNumber": 11,
+              "stageName": "Audit / Explanation Hash-Chain",
+              "passed": true,
+              "durationMs": 0.617,
+              "details": {
+                "auditBlockIndex": 1,
+                "blockHash": "de43f4a5a6376c88859b89da1531dbea0511ce3150314fb8096ab2363a306d8d",
+                "pcrRegister": "7c05d80c8b8613df8c85b125567af2e8cfd2c8235eeb192b0b5a687816afc3ad"
+              },
+              "explanation": "Block #1 chained with Merkle Root: 52625eb39098..."
+            }
+          ],
+          "invokedInvariantsChecked": [
+            "INV-1",
+            "INV-2",
+            "INV-3",
+            "INV-4",
+            "INV-5",
+            "INV-6",
+            "INV-7"
+          ],
+          "invariantsPassed": true,
+          "auditHash": "de43f4a5a6376c88859b89da1531dbea0511ce3150314fb8096ab2363a306d8d",
+          "executionOutcome": {
+            "executed": true,
+            "durationMs": 0.1,
+            "success": true,
+            "resultSummary": "Executed in safe container: Read-only observation of system state (No state mutations)",
+            "independentVerificationPassed": true,
+            "verificationDetails": "Independent verification confirmed container state delta aligns with predicted contract"
+          }
+        }
+      }
+    },
+    {
+      "description": "Staging deployment requiring human confirmation",
+      "result": {
+        "invocationId": "dec-cli-act-1787853945966",
+        "command": "infra.deploy",
+        "verdict": "REQUIRE_CONFIRMATION",
+        "allowedToExecute": false,
+        "totalLatencyUs": 1989,
+        "stageLatencyBreakdownUs": {
+          "Normalize": 119,
+          "Capability Authorization": 20,
+          "Information-Flow Gate": 30,
+          "Execution-Plan Lookup": 56,
+          "Current Risk Classification": 171,
+          "Temporal / Drift / Budget Gate": 31,
+          "Runtime-Health Gate": 5,
+          "Confirmation or Final Re-Check": 6,
+          "Constrained Execution": 10,
+          "Independent Outcome Verification": 5,
+          "Audit / Explanation Hash-Chain": 1248
+        },
+        "confirmationWaitTimeMs": 2450,
+        "budgetRemainingUsd": 4850,
+        "auditBlockHash": "de27593323841f42700f6f2e622632deda2453f85cbdf16da9365f81dff85e3c",
+        "trace": {
+          "decisionId": "dec-cli-act-1787853945966",
+          "timestamp": 1787853945968,
+          "tenantId": "tenant-enterprise-prod",
+          "principalId": "cli-agent-alice-ops",
+          "action": {
+            "id": "cli-act-1787853945966",
+            "toolName": "infra.deploy",
+            "actionType": "WRITE",
+            "parameters": {
+              "environment": "staging",
+              "service": "auth"
+            },
+            "timestamp": 1787853945966
+          },
+          "normalizedAction": {
+            "id": "cli-act-1787853945966",
+            "toolName": "infra.deploy",
+            "actionType": "WRITE",
+            "parameters": {
+              "environment": "staging",
+              "service": "auth"
+            },
+            "taintTags": [],
+            "timestamp": 1787853945966,
+            "nonce": "e23c14a51fb7"
+          },
+          "fingerprint": "ff38dfda49b6b0a1ce79f1206cc372f803bca99bd2fe03e41c496e4e3f5e5ff0",
+          "verdict": "REQUIRE_CONFIRMATION",
+          "reasons": [
+            "Matched rule 'Confirm Staging Deploy' [CONFIRM]"
+          ],
+          "riskVector": {
+            "reversibility": 0.6,
+            "blastRadius": 0.4,
+            "resourceImpact": 0.1,
+            "confidentialityRisk": 0.1,
+            "overallRiskScore": 0.325,
+            "isHighImpact": false,
+            "classificationRationale": [
+              "State mutation: reversible via file system / DB update compensation"
+            ]
+          },
+          "cacheConsulted": true,
+          "cacheHit": false,
+          "stageResults": [
+            {
+              "stageNumber": 1,
+              "stageName": "Normalize",
+              "passed": true,
+              "durationMs": 0.119,
+              "details": {
+                "fingerprint": "ff38dfda49b6b0a1ce79f1206cc372f803bca99bd2fe03e41c496e4e3f5e5ff0",
+                "parametersNormalized": 2
+              },
+              "explanation": "Action canonicalized. Fingerprint generated: ff38dfda49b6..."
+            },
+            {
+              "stageNumber": 2,
+              "stageName": "Capability Authorization",
+              "passed": true,
+              "durationMs": 0.02,
+              "details": {
+                "isAuthorized": true,
+                "grantId": "grant-cli-cli-agent-alice-ops"
+              },
+              "explanation": "Capability grant valid: infra:read:*"
+            },
+            {
+              "stageNumber": 3,
+              "stageName": "Information-Flow Gate",
+              "passed": true,
+              "durationMs": 0.03,
+              "details": {
+                "hasTaint": false,
+                "taintTagsCount": 0
+              },
+              "explanation": "Clean information flow, zero taint tags detected"
+            },
+            {
+              "stageNumber": 4,
+              "stageName": "Execution-Plan Lookup",
+              "passed": true,
+              "durationMs": 0.056,
+              "details": {
+                "cacheConsulted": true,
+                "cacheHit": false,
+                "providedVerdict": false,
+                "planHintsCount": 0
+              },
+              "explanation": "Plan cache miss; seeded new structural plan template"
+            },
+            {
+              "stageNumber": 5,
+              "stageName": "Current Risk Classification",
+              "passed": true,
+              "durationMs": 0.171,
+              "details": {
+                "overallRiskScore": 0.325,
+                "reversibility": 0.6,
+                "blastRadius": 0.4,
+                "isHighImpact": false,
+                "rationale": [
+                  "State mutation: reversible via file system / DB update compensation"
+                ]
+              },
+              "explanation": "Computed risk score: 0.325 (STANDARD)"
+            },
+            {
+              "stageNumber": 6,
+              "stageName": "Temporal / Drift / Budget Gate",
+              "passed": true,
+              "durationMs": 0.031,
+              "details": {
+                "hourlyActionCount": 1,
+                "hourlySpendRemaining": 10000,
+                "passed": true
+              },
+              "explanation": "Within limits (Actions: 1/100, Spend Left: $10000)"
+            },
+            {
+              "stageNumber": 7,
+              "stageName": "Runtime-Health Gate",
+              "passed": true,
+              "durationMs": 0.005,
+              "details": {
+                "runtimeHealth": "HEALTHY"
+              },
+              "explanation": "Runtime health HEALTHY"
+            },
+            {
+              "stageNumber": 8,
+              "stageName": "Confirmation or Final Re-Check",
+              "passed": false,
+              "durationMs": 0.006,
+              "details": {
+                "verdictAwaitingConfirmation": true,
+                "tokenProvided": false
+              },
+              "explanation": "Action halted awaiting human confirmation approval token"
+            },
+            {
+              "stageNumber": 9,
+              "stageName": "Constrained Execution",
+              "passed": true,
+              "durationMs": 0.01,
+              "details": {
+                "executed": false,
+                "executionSuccess": false,
+                "executionDurationMs": 0.002
+              },
+              "explanation": "Action not executed (Verdict: REQUIRE_CONFIRMATION)"
+            },
+            {
+              "stageNumber": 10,
+              "stageName": "Independent Outcome Verification",
+              "passed": true,
+              "durationMs": 0.005,
+              "details": {
+                "independentVerificationPassed": true,
+                "verificationDetails": "Skipped (not executed)"
+              },
+              "explanation": "Skipped (not executed)"
+            },
+            {
+              "stageNumber": 11,
+              "stageName": "Audit / Explanation Hash-Chain",
+              "passed": true,
+              "durationMs": 1.248,
+              "details": {
+                "auditBlockIndex": 2,
+                "blockHash": "de27593323841f42700f6f2e622632deda2453f85cbdf16da9365f81dff85e3c",
+                "pcrRegister": "79ec817c750b32f2ddf0b772f47cc48ac976f9bd263ebde41520bdd038e293d6"
+              },
+              "explanation": "Block #2 chained with Merkle Root: 96a2d384aba1..."
+            }
+          ],
+          "invokedInvariantsChecked": [
+            "INV-1",
+            "INV-2",
+            "INV-3",
+            "INV-4",
+            "INV-5",
+            "INV-6",
+            "INV-7"
+          ],
+          "invariantsPassed": true,
+          "auditHash": "de27593323841f42700f6f2e622632deda2453f85cbdf16da9365f81dff85e3c",
+          "executionOutcome": {
+            "executed": false,
+            "durationMs": 0.002,
+            "success": false,
+            "resultSummary": "Execution not initiated",
+            "independentVerificationPassed": true,
+            "verificationDetails": "Skipped (not executed)"
+          }
+        }
+      }
+    },
+    {
+      "description": "Direct airgapped production deployment blocked by declarative policy",
+      "result": {
+        "invocationId": "dec-cli-act-1787853945968",
+        "command": "infra.deploy",
+        "verdict": "BLOCK",
+        "allowedToExecute": false,
+        "totalLatencyUs": 1157,
+        "stageLatencyBreakdownUs": {
+          "Normalize": 108,
+          "Capability Authorization": 14,
+          "Information-Flow Gate": 18,
+          "Execution-Plan Lookup": 8,
+          "Current Risk Classification": 60,
+          "Temporal / Drift / Budget Gate": 18,
+          "Runtime-Health Gate": 4,
+          "Confirmation or Final Re-Check": 3,
+          "Constrained Execution": 7,
+          "Independent Outcome Verification": 3,
+          "Audit / Explanation Hash-Chain": 681
+        },
+        "confirmationWaitTimeMs": 0,
+        "budgetRemainingUsd": 4850,
+        "auditBlockHash": "e21cf39cd109a10aebe756f94daad06cc832716334ec2de6dce3804a360beb89",
+        "trace": {
+          "decisionId": "dec-cli-act-1787853945968",
+          "timestamp": 1787853945970,
+          "tenantId": "tenant-enterprise-prod",
+          "principalId": "cli-agent-alice-ops",
+          "action": {
+            "id": "cli-act-1787853945968",
+            "toolName": "infra.deploy",
+            "actionType": "WRITE",
+            "parameters": {
+              "environment": "airgapped-prod-eu",
+              "replicaCount": 100
+            },
+            "timestamp": 1787853945968
+          },
+          "normalizedAction": {
+            "id": "cli-act-1787853945968",
+            "toolName": "infra.deploy",
+            "actionType": "WRITE",
+            "parameters": {
+              "environment": "airgapped-prod-eu",
+              "replicaCount": 100
+            },
+            "taintTags": [],
+            "timestamp": 1787853945968,
+            "nonce": "36df4695e000"
+          },
+          "fingerprint": "16c28f1c7cb9b5b3ba5dcf8de95ca9f03b6f7305cd3c8302080ca52bf69b249d",
+          "verdict": "BLOCK",
+          "reasons": [
+            "Matched rule 'Deny Airgapped Prod Direct Deploy' [DENY]"
+          ],
+          "riskVector": {
+            "reversibility": 0.6,
+            "blastRadius": 0.4,
+            "resourceImpact": 0.1,
+            "confidentialityRisk": 0.1,
+            "overallRiskScore": 0.325,
+            "isHighImpact": false,
+            "classificationRationale": [
+              "State mutation: reversible via file system / DB update compensation"
+            ]
+          },
+          "cacheConsulted": true,
+          "cacheHit": true,
+          "stageResults": [
+            {
+              "stageNumber": 1,
+              "stageName": "Normalize",
+              "passed": true,
+              "durationMs": 0.108,
+              "details": {
+                "fingerprint": "16c28f1c7cb9b5b3ba5dcf8de95ca9f03b6f7305cd3c8302080ca52bf69b249d",
+                "parametersNormalized": 2
+              },
+              "explanation": "Action canonicalized. Fingerprint generated: 16c28f1c7cb9..."
+            },
+            {
+              "stageNumber": 2,
+              "stageName": "Capability Authorization",
+              "passed": true,
+              "durationMs": 0.014,
+              "details": {
+                "isAuthorized": true,
+                "grantId": "grant-cli-cli-agent-alice-ops"
+              },
+              "explanation": "Capability grant valid: infra:read:*"
+            },
+            {
+              "stageNumber": 3,
+              "stageName": "Information-Flow Gate",
+              "passed": true,
+              "durationMs": 0.018,
+              "details": {
+                "hasTaint": false,
+                "taintTagsCount": 0
+              },
+              "explanation": "Clean information flow, zero taint tags detected"
+            },
+            {
+              "stageNumber": 4,
+              "stageName": "Execution-Plan Lookup",
+              "passed": true,
+              "durationMs": 0.008,
+              "details": {
+                "cacheConsulted": true,
+                "cacheHit": true,
+                "providedVerdict": false,
+                "planHintsCount": 1
+              },
+              "explanation": "Plan cache provided execution preparation hints (strictly non-authorizing)"
+            },
+            {
+              "stageNumber": 5,
+              "stageName": "Current Risk Classification",
+              "passed": true,
+              "durationMs": 0.06,
+              "details": {
+                "overallRiskScore": 0.325,
+                "reversibility": 0.6,
+                "blastRadius": 0.4,
+                "isHighImpact": false,
+                "rationale": [
+                  "State mutation: reversible via file system / DB update compensation"
+                ]
+              },
+              "explanation": "Computed risk score: 0.325 (STANDARD)"
+            },
+            {
+              "stageNumber": 6,
+              "stageName": "Temporal / Drift / Budget Gate",
+              "passed": true,
+              "durationMs": 0.018,
+              "details": {
+                "hourlyActionCount": 1,
+                "hourlySpendRemaining": 10000,
+                "passed": true
+              },
+              "explanation": "Within limits (Actions: 1/100, Spend Left: $10000)"
+            },
+            {
+              "stageNumber": 7,
+              "stageName": "Runtime-Health Gate",
+              "passed": true,
+              "durationMs": 0.004,
+              "details": {
+                "runtimeHealth": "HEALTHY"
+              },
+              "explanation": "Runtime health HEALTHY"
+            },
+            {
+              "stageNumber": 8,
+              "stageName": "Confirmation or Final Re-Check",
+              "passed": true,
+              "durationMs": 0.003,
+              "details": {
+                "verdictAwaitingConfirmation": false,
+                "tokenProvided": false
+              },
+              "explanation": "No confirmation required"
+            },
+            {
+              "stageNumber": 9,
+              "stageName": "Constrained Execution",
+              "passed": true,
+              "durationMs": 0.007,
+              "details": {
+                "executed": false,
+                "executionSuccess": false,
+                "executionDurationMs": 0.001
+              },
+              "explanation": "Action not executed (Verdict: BLOCK)"
+            },
+            {
+              "stageNumber": 10,
+              "stageName": "Independent Outcome Verification",
+              "passed": true,
+              "durationMs": 0.003,
+              "details": {
+                "independentVerificationPassed": true,
+                "verificationDetails": "Skipped (not executed)"
+              },
+              "explanation": "Skipped (not executed)"
+            },
+            {
+              "stageNumber": 11,
+              "stageName": "Audit / Explanation Hash-Chain",
+              "passed": true,
+              "durationMs": 0.681,
+              "details": {
+                "auditBlockIndex": 3,
+                "blockHash": "e21cf39cd109a10aebe756f94daad06cc832716334ec2de6dce3804a360beb89",
+                "pcrRegister": "8945b5e2f75a6e2481ea15e41d503dfe2a53be7e298c62478f6f8b82770c4804"
+              },
+              "explanation": "Block #3 chained with Merkle Root: fc691050661b..."
+            }
+          ],
+          "invokedInvariantsChecked": [
+            "INV-1",
+            "INV-2",
+            "INV-3",
+            "INV-4",
+            "INV-5",
+            "INV-6",
+            "INV-7"
+          ],
+          "invariantsPassed": true,
+          "auditHash": "e21cf39cd109a10aebe756f94daad06cc832716334ec2de6dce3804a360beb89",
+          "executionOutcome": {
+            "executed": false,
+            "durationMs": 0.001,
+            "success": false,
+            "resultSummary": "Execution not initiated",
+            "independentVerificationPassed": true,
+            "verificationDetails": "Skipped (not executed)"
+          }
+        }
+      }
+    }
+  ]
+}

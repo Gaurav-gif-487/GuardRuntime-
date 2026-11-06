@@ -1,0 +1,36 @@
+{
+  "experiment": "guardruntime-independent-plan-cache-generalization",
+  "status": "all six splits implemented and executed (see experiments/results.json, 2026-08-27)",
+  "hypothesis": "Reusing execution-plan metadata for an exact applicable plan scope does not change current authorization outcomes or bypass current safety gates.",
+  "arms": ["cache-disabled", "production-plan-cache", "reference-exact-plan-cache"],
+  "oracle": "src/guardruntime/__tests__/independent-generalization.test.ts (random split, vitest); src/guardruntime/eval/generalization-splits.ts + scripts/run_full_generalization.ts (all 6 splits, runnable via bare tsx without node_modules)",
+  "short_workload_cases": 200,
+  "long_workload_cases": 60000,
+  "long_workload_enabled_by": "RUN_LONG_EXPERIMENTS=1",
+  "required_generalization_splits": [
+    "random",
+    "template-held-out",
+    "policy-held-out",
+    "environment-held-out",
+    "compositional",
+    "temporal"
+  ],
+  "primary_metrics": [
+    "decision_equivalence",
+    "oracle_disagreement",
+    "invalid_plan_reuse",
+    "cache_hits",
+    "cache_misses",
+    "risk_classification_calls"
+  ],
+  "secondary_metrics": [
+    "p50_ms",
+    "p95_ms",
+    "p99_ms",
+    "heap_delta",
+    "per_entry_memory",
+    "plan_preparation_work"
+  ],
+  "safety_target": "zero invalid plan reuse and zero authorization divergence",
+  "cost_metric": "measured plan-preparation work only; not LLM inference cost"
+}

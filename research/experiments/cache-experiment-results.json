@@ -1,0 +1,41 @@
+{
+  "status": "executed",
+  "generatedAt": "2026-08-27T17:33:12.976Z",
+  "method": "Actual GuardRuntime with repeated identical goals across bounded tenants; unique idempotency keys; cache-enabled and cache-disabled arms. Record-call count is a proxy for plan-record/preparation-path work, not a monetary cost measurement.",
+  "uncached": {
+    "cacheEnabled": false,
+    "tenants": 4,
+    "repeatsPerTenant": 25,
+    "totalCalls": 100,
+    "cacheHits": 0,
+    "cacheMisses": 100,
+    "hitRate": 0,
+    "plansStoredPerTenant": 25,
+    "recordCalls": 100,
+    "p50Ms": 0.9354000000000724,
+    "p95Ms": 2.7278000000001157,
+    "meanMs": 1.3083210000000054
+  },
+  "cached": {
+    "cacheEnabled": true,
+    "tenants": 4,
+    "repeatsPerTenant": 25,
+    "totalCalls": 100,
+    "cacheHits": 88,
+    "cacheMisses": 12,
+    "hitRate": 0.88,
+    "plansStoredPerTenant": 1,
+    "recordCalls": 12,
+    "p50Ms": 0.8061999999999898,
+    "p95Ms": 1.7409000000000106,
+    "meanMs": 0.9815060000000062
+  },
+  "observed": {
+    "cacheHitRatePercent": 88,
+    "recordCallsAvoided": 88,
+    "recordCallReductionPercent": 88,
+    "medianLatencyDeltaPercent": -13.812272824467886,
+    "p95LatencyDeltaPercent": -36.17933866119449
+  },
+  "limitation": "This is an in-process micro-experiment, not a production cost benchmark. GuardRuntime's current plan preparation is deliberately tiny (one metadata step), so the measured latency difference must not be presented as a general cost-saving percentage."
+}

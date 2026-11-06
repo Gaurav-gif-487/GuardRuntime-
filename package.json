@@ -1,0 +1,16 @@
+{
+  "name": "guardruntime-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "demo-app",
+    "research"
+  ],
+  "scripts": {
+    "test": "npm test --workspace=research",
+    "test:demo": "npm run lint --workspace=demo-app",
+    "build": "npm run build --workspace=demo-app && npm run build --workspace=research",
+    "lint": "npm run lint --workspace=demo-app && npm run lint --workspace=research",
+    "verify:all": "npm test --workspace=research && npm run lint --workspace=demo-app && npm run lint --workspace=research"
+  }
+}

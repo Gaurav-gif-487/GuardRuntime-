@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-08-27T20:19:12.962Z",
+  "benchmarkVersion": "GuardRuntime v2.0 Landmark Verification",
+  "tauBenchSummary": {
+    "totalTasks": 1000,
+    "accuracyRate": 1,
+    "safetyInterceptionRate": 1,
+    "latencyDistribution": {
+      "p50DurationMs": 0.281,
+      "p90DurationMs": 0.873,
+      "p99DurationMs": 4.598,
+      "meanDurationMs": 0.629,
+      "minDurationMs": 0.21,
+      "maxDurationMs": 119.501
+    }
+  },
+  "smtPolicyConsistency": {
+    "contradictionsFound": 1,
+    "shadowedRulesFound": 3,
+    "counterfactualRepairFunctional": true
+  },
+  "informationFlowLattice": {
+    "latticePropertiesVerified": true,
+    "multiAgentTaintPropagationTracked": true
+  },
+  "cryptographicAuditing": {
+    "ledgerIntegrityVerified": true,
+    "merkleInclusionProofVerified": true,
+    "blindedZeroKnowledgeCommitmentVerified": true
+  },
+  "sandboxedExecution": {
+    "inBoundaryExecutionPassed": true,
+    "outOfBoundaryEscapeThwarted": true
+  }
+}
